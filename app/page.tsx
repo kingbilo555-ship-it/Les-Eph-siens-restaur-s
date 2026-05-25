@@ -75,9 +75,9 @@ export default function Home() {
               </svg>
             </div>
             <h2 className="text-3xl md:text-5xl font-serif text-primary leading-tight mb-6">
-              "Car c'est par la grâce que vous êtes sauvés, par le moyen de la foi. Et cela ne vient pas de vous, c'est le don de Dieu."
+              "La parole de Dieu vaincra satan n'importe où, en tout lieu dans n'importe quelle condition, n'importe quand."
             </h2>
-            <p className="text-xl text-muted-foreground font-sans font-medium">— Éphésiens 2:8</p>
+            <p className="text-xl text-muted-foreground font-sans font-medium">— Expectative 27 53-0507 WILLIAM BRANHAM</p>
           </motion.div>
         </div>
       </section>
