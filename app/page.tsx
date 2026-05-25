@@ -109,9 +109,9 @@ export default function Home() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {[
-              { title: "RÉUNION DE PRIÈRE", date: "Mercredi 18H30 - 20H30", image: "https://images.unsplash.com/photo-1544427920-c49ccfb85579?q=80&w=2832&auto=format&fit=crop" },
-              { title: "RÉUNION D'ENSEIGNEMENT", date: "Vendredi 18H30 - 20H30", image: "https://images.unsplash.com/photo-1473280025148-643f9b0cbac2?q=80&w=2948&auto=format&fit=crop" },
-              { title: "CULTE DE CÉLÉBRATION", date: "Dimanche 09H00 - 12H00", image: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=2940&auto=format&fit=crop" }
+              { title: "RÉUNION DE PRIÈRE", date: "Mercredi 18H30 - 20H30", image: "/fond-evenement.jpg" },
+              { title: "RÉUNION D'ENSEIGNEMENT", date: "Vendredi 18H30 - 20H30", image: "/fond-evenement.jpg" },
+              { title: "CULTE DE CÉLÉBRATION", date: "Dimanche 09H00 - 12H00", image: "/fond-evenement.jpg" }
             ].map((event, index) => (
               <motion.div key={index} variants={fadeIn} className="group cursor-pointer">
                 <div className="relative h-64 w-full rounded-2xl overflow-hidden mb-4 shadow-md">

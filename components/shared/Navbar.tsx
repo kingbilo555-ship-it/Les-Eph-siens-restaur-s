@@ -38,8 +38,13 @@ export function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-accent font-serif text-xl font-bold group-hover:scale-105 transition-transform">
-            ER
+          <div className="relative w-16 h-16 group-hover:scale-105 transition-transform">
+            <Image 
+              src="/logo.png" 
+              alt="Logo de l'église" 
+              fill 
+              className="object-contain" 
+            />
           </div>
           <span className={`font-serif text-xl font-semibold hidden sm:block ${scrolled || pathname !== "/" ? 'text-primary' : 'text-white drop-shadow-md'}`}>
             Les Éphésiens Restaurés
