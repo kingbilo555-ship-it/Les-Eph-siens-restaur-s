@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
@@ -13,8 +14,13 @@ export function Footer() {
           {/* Logo & Intro */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary font-serif text-2xl font-bold">
-                ER
+              <div className="relative w-20 h-20 bg-white rounded-full p-2 flex items-center justify-center">
+                <Image 
+                  src="/logo.png" 
+                  alt="Logo Les Éphésiens Restaurés" 
+                  fill 
+                  className="object-contain p-2" 
+                />
               </div>
               <span className="font-serif text-2xl font-semibold">
                 Les Éphésiens<br />Restaurés
