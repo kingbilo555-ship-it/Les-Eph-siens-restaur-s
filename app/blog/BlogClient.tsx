@@ -103,7 +103,7 @@ export default function BlogClient({ initialPosts }: { initialPosts: PostItem[] 
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPosts.map((post) => (
-            <article key={post._id || post.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group">
+            <article key={(post as any)._id || post.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group">
               
               {/* Image */}
               <div className="relative h-60 w-full overflow-hidden bg-gray-100">
