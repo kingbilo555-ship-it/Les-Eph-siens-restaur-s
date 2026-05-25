@@ -5,7 +5,21 @@ import Image from "next/image";
 import { Clock, User, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const blogPosts = [
+export type PostItem = {
+  _id?: string;
+  id?: number;
+  title: string;
+  excerpt: string;
+  category: string;
+  author: string;
+  date?: string;
+  publishedAt?: string;
+  readTime: string;
+  image: string;
+  slug?: string;
+};
+
+const blogPosts: PostItem[] = [
   {
     id: 1,
     title: "Comment maintenir sa paix dans la tempête",
@@ -50,19 +64,7 @@ const blogPosts = [
 
 const categories = ["Tous", "Méditation", "Témoignage", "Étude"];
 
-type PostItem = {
-  _id?: string;
-  id?: number;
-  title: string;
-  excerpt: string;
-  category: string;
-  author: string;
-  date?: string;
-  publishedAt?: string;
-  readTime: string;
-  image: string;
-  slug?: string;
-};
+// Type PostItem moved above
 
 export default function BlogClient({ initialPosts }: { initialPosts: PostItem[] }) {
   const [activeCategory, setActiveCategory] = useState("Tous");
