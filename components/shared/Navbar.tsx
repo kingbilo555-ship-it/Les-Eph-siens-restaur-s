@@ -32,21 +32,16 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
+        scrolled || pathname !== "/" ? "bg-white/95 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-16 h-16 group-hover:scale-105 transition-transform">
-            <Image 
-              src="/logo.png" 
-              alt="Logo de l'église" 
-              fill 
-              className="object-contain" 
-            />
+          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-accent font-serif text-xl font-bold group-hover:scale-105 transition-transform">
+            ER
           </div>
-          <span className={`font-serif text-xl font-semibold hidden sm:block ${scrolled ? 'text-primary' : 'text-white drop-shadow-md'}`}>
+          <span className={`font-serif text-xl font-semibold hidden sm:block ${scrolled || pathname !== "/" ? 'text-primary' : 'text-white drop-shadow-md'}`}>
             Les Éphésiens Restaurés
           </span>
         </Link>
@@ -59,8 +54,8 @@ export function Navbar() {
               href={link.href}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 pathname === link.href
-                  ? scrolled ? "bg-primary/10 text-primary" : "bg-white/20 text-white"
-                  : scrolled ? "text-muted-foreground hover:text-primary hover:bg-muted" : "text-gray-200 hover:text-white hover:bg-white/10"
+                  ? (scrolled || pathname !== "/") ? "bg-primary/10 text-primary" : "bg-white/20 text-white"
+                  : (scrolled || pathname !== "/") ? "text-slate-600 hover:text-primary hover:bg-slate-100" : "text-gray-200 hover:text-white hover:bg-white/10"
               }`}
             >
               {link.label}
@@ -71,7 +66,7 @@ export function Navbar() {
         {/* CTA & Mobile Menu */}
         <div className="flex items-center gap-4">
           <Link href="/give" className="hidden sm:block">
-            <Button variant={scrolled ? "default" : "secondary"} className="rounded-full px-6">
+            <Button variant={scrolled || pathname !== "/" ? "default" : "secondary"} className="rounded-full px-6">
               Faire un Don
             </Button>
           </Link>
@@ -79,7 +74,7 @@ export function Navbar() {
           {/* Mobile Navigation */}
           <div className="md:hidden">
             <Sheet>
-              <SheetTrigger render={<Button variant={scrolled ? "outline" : "secondary"} size="icon" className="rounded-full" />}>
+              <SheetTrigger render={<Button variant={scrolled || pathname !== "/" ? "outline" : "secondary"} size="icon" className="rounded-full" />}>
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Menu</span>
               </SheetTrigger>
