@@ -38,7 +38,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-24 h-24 md:w-28 md:h-28 group-hover:scale-105 transition-transform">
+          <div className="relative w-20 h-20 md:w-20 md:h-20 group-hover:scale-105 transition-transform">
             <Image 
               src="/logo.png" 
               alt="Logo de l'église" 
